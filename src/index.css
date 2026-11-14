@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { @apply bg-white font-sans text-base text-ink antialiased; overflow-x: hidden; }
+  h1, h2, h3 { text-wrap: balance; }
+  ::selection { background: #C7A66A; color: #10243A; }
+  :focus-visible { outline-color: #C7A66A; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
